@@ -573,8 +573,8 @@
 
         .cursor.hover {
             transform: scale(2);
-            background: rgba(255, 107, 107, 0.8);
-            box-shadow: 0 0 30px rgba(255, 107, 107, 0.7);
+            background: rgba(107, 255, 235, 0.8);
+            box-shadow: 0 0 30px rgba(107, 250, 255, 0.7);
         }
 
         .data-viz {
@@ -651,3 +651,192 @@
         color: #ff4d4d;
         transition: opacity 0.6s ease;
         }
+        /* Base styles for responsiveness */
+        #about .section-content {
+            padding: 20px;
+        }
+
+        #about .about-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Make the flex container responsive */
+        #about .about-content > div:first-child {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        /* Profile image wrapper */
+        #about .about-content > div:first-child {
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            #about .about-content > div:first-child {
+                flex-direction: row;
+            }
+        }
+
+        /* Responsive layout for name and description */
+        #about .about-content > div:first-child > div:last-child {
+            flex: 1;
+        }
+
+        /* Adjust padding and gap on smaller screens */
+        @media (max-width: 767px) {
+            #about .about-content {
+                padding: 10px;
+            }
+
+            #about .about-content > div:first-child {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            #about .about-content > div:first-child > div:last-child {
+                text-align: center;
+            }
+
+            #about .about-content > div:last-child {
+                padding: 15px;
+            }
+        }
+
+        /* Skill tags wrap and resize */
+        #about .about-content span {
+            display: inline-block;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        /* Make image scale with smaller devices */
+        @media (max-width: 480px) {
+            #about .about-content > div:first-child > div:first-child {
+                width: 160px;
+                height: 160px;
+            }
+
+            #about .about-content > div:first-child > div:first-child > div {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        /* Contact Section */
+.contact-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-info, 
+.contact-form-container {
+    background: rgba(30, 30, 30, 0.7);
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid rgba(64, 224, 208, 0.1);
+}
+
+.contact-info h3, 
+.contact-form-container h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #40E0D0;
+}
+
+.contact-info p {
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    min-width: 24px;
+}
+
+.contact-item .fa-envelope { color: #FF6B6B; }
+.contact-item .fa-phone { color: #40E0D0; }
+.contact-item .fa-map-marker-alt { color: #8A2BE2; }
+
+.social-links {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #40E0D0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-icons a {
+    font-size: 1.8rem;
+    color: #40E0D0;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    color: #FF6B6B;
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 992px) {
+    .contact-grid-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-info, 
+    .contact-form-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-grid-container {
+        gap: 20px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .social-icons {
+        gap: 15px;
+    }
+    
+    .social-icons a {
+        font-size: 1.5rem;
+    }
+}

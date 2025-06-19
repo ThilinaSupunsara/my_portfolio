@@ -1,71 +1,87 @@
-   
-                // Navigation functionality
-            // Move showSection function to global scope
-        function showSection(sectionId) {
-            // Get elements needed for the function
-            const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
-            const mobileNav = document.getElementById('mobileNav');
-            
-            // Hide all sections
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Show selected section
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.classList.add('active');
-            }
-            
-            // Update active nav link
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.dataset.target === sectionId) {
-                    link.classList.add('active');
-                }
-            });
-            
-            // Close mobile menu if open
-            if (mobileNav) {
-                mobileNav.classList.remove('active');
-            }
+    // Navigation functionality
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // Show selected section
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.classList.add('active');
         }
+        
+        // Update active nav link in both desktop and mobile menus
+        document.querySelectorAll('.nav-links a, .mobile-nav a').forEach(link => {
+            link.classList.remove('active');
+            if (link.dataset.target === sectionId) {
+                link.classList.add('active');
+            }
+        });
+        
+        // Close mobile menu if open
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileNav) {
+            mobileNav.classList.remove('active');
+        }
+    }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get all nav links
-            const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
-            const mobileNav = document.getElementById('mobileNav');
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const closeMobileMenu = document.querySelector('.close-mobile-menu');
-            
-            // Add click event to nav links
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetSection = this.dataset.target;
-                    showSection(targetSection);
-                });
+    // Initialize navigation
+    function initNavigation() {
+        // Get all navigation elements
+        const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const closeMobileMenu = document.querySelector('.close-mobile-menu');
+        
+        // Add click event to all nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetSection = this.dataset.target;
+                showSection(targetSection);
             });
-            
-            // Mobile menu toggle
-            mobileMenuBtn.addEventListener('click', function() {
+        });
+        
+        // Mobile menu toggle button
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent event bubbling
                 mobileNav.classList.add('active');
             });
-            
-            closeMobileMenu.addEventListener('click', function() {
+        }
+        
+        // Close mobile menu button
+        if (closeMobileMenu) {
+            closeMobileMenu.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent event bubbling
                 mobileNav.classList.remove('active');
             });
-            
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function(e) {
+        }
+        
+        // Close mobile menu when clicking outside of it
+        document.addEventListener('click', function(e) {
+            if (mobileNav && mobileNav.classList.contains('active')) {
+                // Check if click is outside mobile nav and not on the menu button
                 if (!mobileNav.contains(e.target) && e.target !== mobileMenuBtn) {
                     mobileNav.classList.remove('active');
                 }
-            });
-
-            // Initialize with Home section
-            showSection('home');
+            }
         });
+
+        // Prevent clicks inside mobile nav from closing it
+        if (mobileNav) {
+            mobileNav.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+
+        // Initialize with Home section active
+        showSection('home');
+    }
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', initNavigation);
 
        
 
