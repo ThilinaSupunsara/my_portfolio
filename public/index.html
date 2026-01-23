@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description"
+        content="Thilina Supunsara - Professional Full-Stack Developer & Designer. Specializing in Web Development, React, Laravel, and Mobile Applications.">
+    <meta name="keywords"
+        content="Thilina Supunsara, Full Stack Developer, Web Developer, React Developer, Laravel Developer, Sri Lanka">
+    <meta name="author" content="Thilina Supunsara">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Thilina Supunsara - Full Stack Developer">
+    <meta property="og:description"
+        content="Professional Full-Stack Developer & Designer. Building modern web applications with React, Laravel, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="profile.png">
+
     <link rel="icon" type="image/png" href="mylogo.png">
-    <title>Thilina Portfolio</title>
+    <link rel="apple-touch-icon" href="mylogo.png">
+
+    <title>Thilina Supunsara | Full Stack Developer & Designer</title>
+
+    <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        (function(){
-            emailjs.init("GAVUQvm0FL8ipctEn"); 
+        (function () {
+            emailjs.init("GAVUQvm0FL8ipctEn");
         })();
     </script>
-    
-    <link rel="stylesheet" href="css/style.css" />
 
-    <script src="js/script.js"></script>
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
     <!-- Navigation -->
-    <header class="navbar">
-        <div class="logo">𝑇ℋ𝓘ℒ𝓘𝓝𝓐</div>
-        <nav class="nav-links">
+    <header class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="logo" aria-label="Thilina Logo">𝑇ℋ𝓘ℒ𝓘𝓝𝓐</div>
+        <nav class="nav-links" aria-label="Desktop navigation">
             <a href="#" class="active" data-target="home">Home</a>
             <a href="#" data-target="about">About</a>
             <a href="#" data-target="services">Services</a>
@@ -30,8 +56,8 @@
             <a href="#" data-target="portfolio">Portfolio</a>
             <a href="#" data-target="contact">Contact</a>
         </nav>
-        <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
+        <button class="mobile-menu-btn" aria-label="Open mobile menu" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
     </header>
 
@@ -60,534 +86,578 @@
         </a>
     </div>
 
-    <!-- Content Sections -->
-    <section id="home" class="content-section active">
-        <div class="home-content">
-           <h3 class="home-title" style="font-size: 2rem;">Hello, I'm</h3>
-            <h1 class="home-title">Thilina supunsara</h1>
-            <h3 class="creative-text">
-                Creative <span class="changing-text">Designer</span>
-            </h3>
-            
-            <button class="tech-button" onclick="showSection('contact')">Hire Me</button>
-        </div>
-        <div style="text-align: center;">
-            <div style="display: flex; justify-content: center; gap: 25px;">
-                <a href="https://github.com/ThilinaSupunsara" style="font-size: 2rem; color: #40E0D0;"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/thilina-supunsara/" style="font-size: 2rem; color: #40E0D0;"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/share/16XJPUkTjH/" style="font-size: 2rem; color: #40E0D0;"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/thilina_supunsara?igsh=bHg1ZGw2N3Y1YmZ2" style="font-size: 2rem; color: #40E0D0;"><i class="fab fa-instagram"></i></a>
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content-section active" aria-labelledby="home-title">
+            <div class="home-content">
+                <h3 class="home-title">Hello, I'm</h3>
+                <h1 class="home-title" id="home-title">Thilina Supunsara</h1>
+                <h2 class="creative-text">
+                    Creative <span class="changing-text">Designer</span>
+                </h2>
+                <button class="tech-button" onclick="showSection('contact')" aria-label="Contact me for hire">
+                    Hire Me
+                </button>
             </div>
-        </div>
-    </section>
+            <div class="social-icons-home">
+                <div>
+                    <a href="https://github.com/ThilinaSupunsara" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub Profile">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thilina-supunsara/" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/16XJPUkTjH/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook Profile">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/thilina_supunsara?igsh=bHg1ZGw2N3Y1YmZ2" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram Profile">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <section id="about" class="content-section">
-        <div class="section-content">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div style="display: flex; gap: 30px; align-items: center; margin-bottom: 30px;">
-                    <div style="width: 210px; height: 210px; background: linear-gradient(45deg, #40E0D0, #8A2BE2); border-radius: 50%; padding: 5px; display: flex; align-items: center; justify-content: center;">
-                        <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
-                            <img src="profile.png" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- About Section -->
+        <section id="about" class="content-section" aria-labelledby="about-title">
+            <div class="section-content">
+                <h2 class="section-title" id="about-title">About Me</h2>
+                <div class="about-content">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="profile.png" alt="Thilina Supunsara - Professional Developer" loading="lazy">
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Thilina Supunsara</h3>
+                            <p>
+                                Welcome! I'm Thilina Supunsara, 24 years old, and I'm based in Puttalam, Sri Lanka. I'm
+                                always looking for new things to learn.
+                            </p>
+                            <div>
+                                <span>Web Development</span>
+                                <span>Frontend Development</span>
+                                <span>Backend Development</span>
+                                <span>Full-Stack Development</span>
+                                <span>CMS Development</span>
+                                <span>Mobile Apps</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div style="flex: 1;">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: #40E0D0;">Thilina Supunsara</h3>
-                        <p style="color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 20px;">
-                            Welcome! I'm Thilina Supunsara, 24 years old, and I'm based in Puttalam, Sri Lanka. I'm always looking for new things to learn.
+                    <div>
+                        <h3>My Journey</h3>
+                        <p>
+                            I'm a Bachelor of Information Technology graduate from the University of Moratuwa,
+                            passionate about building clean, responsive, and user-focused digital experiences. As a
+                            dedicated Software Developer, I specialize in web development and design, with hands-on
+                            experience in multiple frameworks and programming languages. I'm driven by a commitment to
+                            delivering high-quality, efficient, and innovative solutions.
                         </p>
-                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                            
-                            <span style="background: rgba(64, 224, 208, 0.1); color: #40E0D0; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">Web Development</span>
-                            <span style="background: rgba(64, 224, 208, 0.1); color: #40E0D0; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">Frontend Development</span>
-                            <span style="background: rgba(64, 224, 208, 0.1); color: #40E0D0; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">Backend Development</span>
-                            <span style="background: rgba(64, 224, 208, 0.1); color: #40E0D0; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">Full-Stack Development</span>
-                            <span style="background: rgba(64, 224, 208, 0.1); color: #40E0D0; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">CMS Development</span>
-                            <span style="background: rgba(64, 224, 208, 0.1); color: #40E0D0; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem;">Mobile Apps</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="content-section" aria-labelledby="services-title">
+            <div class="section-content">
+                <h2 class="section-title" id="services-title">Services</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                        <h3>Web Development</h3>
+                        <p>Creating functional and visually appealing websites using modern technologies and best
+                            practices.</p>
+                    </article>
+
+                    <article class="card">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                        <h3>Frontend Development</h3>
+                        <p>Developing the visual part of websites and applications that users interact with, using HTML,
+                            CSS, JavaScript, and modern frontend frameworks.</p>
+                    </article>
+
+                    <article class="card">
+                        <i class="fas fa-server" aria-hidden="true"></i>
+                        <h3>Backend Development</h3>
+                        <p>Creating and managing server-side logic, databases, and APIs to support the functionality of
+                            web and mobile apps.</p>
+                    </article>
+
+                    <article class="card">
+                        <i class="fas fa-layer-group" aria-hidden="true"></i>
+                        <h3>Full-Stack Development</h3>
+                        <p>Handling both frontend and backend development, providing complete solutions from user
+                            interface to server logic.</p>
+                    </article>
+
+                    <article class="card">
+                        <i class="fas fa-plug" aria-hidden="true"></i>
+                        <h3>API Integration</h3>
+                        <p>Connecting applications with third-party services or internal systems to enable data sharing
+                            and added functionality.</p>
+                    </article>
+
+                    <article class="card">
+                        <i class="fas fa-database" aria-hidden="true"></i>
+                        <h3>Database Design & Management</h3>
+                        <p>Designing, implementing, and maintaining databases to store, retrieve, and manage data
+                            efficiently and securely.</p>
+                    </article>
+
+                    <article class="card">
+                        <i class="fas fa-tablet-alt" aria-hidden="true"></i>
+                        <h3>Responsive Web Design</h3>
+                        <p>Ensuring websites work smoothly and look great on all devices, including desktops, tablets,
+                            and smartphones.</p>
+                    </article>
+
+                    <article class="card">
+                        <i class="fas fa-upload" aria-hidden="true"></i>
+                        <h3>Deployment & Hosting</h3>
+                        <p>Making applications live and accessible on the internet using modern hosting services.</p>
+                    </article>
+
+                    <article class="card">
+                        <i class="fas fa-cloud" aria-hidden="true"></i>
+                        <h3>Cloud Services</h3>
+                        <p>Utilizing platforms like Firebase to add features like authentication, hosting, real-time
+                            databases, and cloud storage.</p>
+                    </article>
+
+                    <article class="card">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                        <h3>CMS Development</h3>
+                        <p>Creating and customizing Content Management Systems like WordPress to allow clients to manage
+                            their content easily.</p>
+                    </article>
+
+                    <article class="card">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                        <h3>Mobile App Development</h3>
+                        <p>Building user-friendly mobile applications for Android and iOS platforms.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="content-section" aria-labelledby="skills-title">
+            <div class="section-content">
+                <h2 class="section-title" id="skills-title">Skills</h2>
+                <div class="skills-container">
+                    <!-- Programming Languages -->
+                    <div class="skill-item">
+                        <i class="fab fa-html5" aria-hidden="true"></i>
+                        <div>
+                            <h4>HTML</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                        <div>
+                            <h4>CSS</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js" aria-hidden="true"></i>
+                        <div>
+                            <h4>JavaScript</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                        <div>
+                            <h4>PHP</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-java" aria-hidden="true"></i>
+                        <div>
+                            <h4>Java</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-node-js" aria-hidden="true"></i>
+                        <div>
+                            <h4>Express.js</h4>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks & Libraries -->
+                    <div class="skill-item">
+                        <i class="fas fa-code-branch" aria-hidden="true"></i>
+                        <div>
+                            <h4>jQuery</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-bootstrap" aria-hidden="true"></i>
+                        <div>
+                            <h4>Bootstrap</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                        <div>
+                            <h4>Laravel</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react" aria-hidden="true"></i>
+                        <div>
+                            <h4>React</h4>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skill-item">
+                        <i class="fas fa-database" aria-hidden="true"></i>
+                        <div>
+                            <h4>MySQL</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-fire" aria-hidden="true"></i>
+                        <div>
+                            <h4>Firebase</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-leaf" aria-hidden="true"></i>
+                        <div>
+                            <h4>MongoDB</h4>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-item">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                        <div>
+                            <h4>VS Code</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-desktop" aria-hidden="true"></i>
+                        <div>
+                            <h4>Eclipse</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-server" aria-hidden="true"></i>
+                        <div>
+                            <h4>SQL Server</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-cogs" aria-hidden="true"></i>
+                        <div>
+                            <h4>XAMPP</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-android" aria-hidden="true"></i>
+                        <div>
+                            <h4>Android Studio</h4>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                        </div>
+                    </div>
+
+                    <!-- Version Control -->
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt" aria-hidden="true"></i>
+                        <div>
+                            <h4>Git</h4>
                         </div>
                     </div>
                 </div>
-                
-                <div style="background: rgba(30, 30, 30, 0.7); border-radius: 10px; padding: 25px; border: 1px solid rgba(64, 224, 208, 0.1);">
-                    <h3 style="font-size: 1.4rem; margin-bottom: 20px; color: #FF6B6B;">My Journey</h3>
-                    <p style="color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 15px;">
-                      I'm a Bachelor of Information Technology graduate from the University of Moratuwa, passionate about building clean, responsive, and user-focused digital experiences. As a dedicated Software Developer, I specialize in web development and design, with hands-on experience in multiple frameworks and programming languages. I’m driven by a commitment to delivering high-quality, efficient, and innovative solutions.
-                    </p>
-                    
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services" class="content-section">
-        <div class="section-content">
-            <h2 class="section-title">Services</h2>
-            <div class="card-grid">
-                <div class="card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Web Development</h3>
-                <p>Creating functional and visually appealing websites using modern technologies and best practices.</p>
-            </div>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="content-section" aria-labelledby="portfolio-title">
+            <div class="section-content">
+                <h2 class="section-title" id="portfolio-title">Portfolio</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <div>
+                            <img src="portfolio/easylifesolution.jpeg"
+                                alt="EasyLife Solutions - Tailoring Order Management System" loading="lazy">
+                        </div>
+                        <h3>WEB-BASED TAILORING ORDER MANAGEMENT SYSTEM</h3>
+                        <p>Crafting digital solutions for the fashion industry. Designed and developed a Web-Based
+                            Tailoring Order Management System for EasyLife Solutions using Laravel and MySQL, featuring
+                            intuitive interfaces, real-time tracking, and secure payment integration to transform the
+                            tailoring experience.</p>
+                    </article>
 
-            <div class="card">
-                <i class="fas fa-code"></i>
-                <h3>Frontend Development</h3>
-                <p>Developing the visual part of websites and applications that users interact with, using HTML, CSS, JavaScript, and modern frontend frameworks.</p>
-            </div>
+                    <article class="card">
+                        <div>
+                            <img src="portfolio/vfr.jpg" alt="Virtual Try-On Application" loading="lazy">
+                        </div>
+                        <h3>Virtual Try-On Application</h3>
+                        <p>This application allows users to virtually try on clothes using uploaded garment images.
+                            Users can select the garment type, adjust its size and position, and see how it fits on
+                            their body in real-time. The app offers interactive controls for scaling and positioning,
+                            making the try-on experience customizable and user-friendly.</p>
+                    </article>
 
-            <div class="card">
-                <i class="fas fa-server"></i>
-                <h3>Backend Development</h3>
-                <p>Creating and managing server-side logic, databases, and APIs to support the functionality of web and mobile apps.</p>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-layer-group"></i>
-                <h3>Full-Stack Development</h3>
-                <p>Handling both frontend and backend development, providing complete solutions from user interface to server logic.</p>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-plug"></i>
-                <h3>API Integration</h3>
-                <p>Connecting applications with third-party services or internal systems to enable data sharing and added functionality.</p>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-database"></i>
-                <h3>Database Design & Management</h3>
-                <p>Designing, implementing, and maintaining databases to store, retrieve, and manage data efficiently and securely.</p>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-tablet-alt"></i>
-                <h3>Responsive Web Design</h3>
-                <p>Ensuring websites work smoothly and look great on all devices, including desktops, tablets, and smartphones.</p>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-upload"></i>
-                <h3>Deployment & Hosting</h3>
-                <p>Making applications live and accessible on the internet using services.</p>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-cloud"></i>
-                <h3>Cloud Services</h3>
-                <p>Utilizing platforms like Firebase to add features like authentication, hosting, real-time databases, and cloud storage.</p>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-edit"></i>
-                <h3>CMS Development</h3>
-                <p>Creating and customizing Content Management Systems like WordPress to allow clients to manage their content easily.</p>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile App Development</h3>
-                <p>Building user-friendly mobile applications for Android and iOS platforms.</p>
-            </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="content-section">
-        <div class="section-content">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-container">
-                <!-- Programming Languages -->
-            <div class="skill-item">
-                <i class="fab fa-html5"></i>
-                <div><h4>HTML</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-css3-alt"></i>
-                <div><h4>CSS</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-js"></i>
-                <div><h4>JavaScript</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-code"></i>
-                <div><h4>PHP</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-java"></i>
-                <div><h4>Java</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-node-js"></i>
-                <div><h4>Express.js</h4></div>
-            </div>
-
-            <!-- Frameworks & Libraries -->
-            <div class="skill-item">
-                <i class="fas fa-code-branch"></i>
-                <div><h4>jQuery</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-bootstrap"></i>
-                <div><h4>Bootstrap</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-project-diagram"></i>
-                <div><h4>Laravel</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-react"></i>
-                <div><h4>React</h4></div>
-            </div>
-
-            <!-- Databases -->
-            <div class="skill-item">
-                <i class="fas fa-database"></i>
-                <div><h4>MySQL</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-fire"></i>
-                <div><h4>Firebase</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-leaf"></i>
-                <div><h4>MongoDB</h4></div>
-            </div>
-
-            <!-- Tools -->
-            <div class="skill-item">
-                <i class="fas fa-code"></i>
-                <div><h4>VS Code</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-desktop"></i>
-                <div><h4>Eclipse</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-server"></i>
-                <div><h4>SQL Server</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-cogs"></i>
-                <div><h4>XAMPP</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-android"></i>
-                <div><h4>Android Studio</h4></div>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-github"></i>
-                <div><h4>GitHub</h4></div>
-            </div>
-
-            <!-- Version Control -->
-            <div class="skill-item">
-                <i class="fab fa-git-alt"></i>
-                <div><h4>Git</h4></div>
-            </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="content-section">
-        <div class="section-content">
-            <h2 class="section-title">Portfolio</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <div style="height: 180px; background: linear-gradient(45deg, #40E0D0, #8A2BE2); border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                    <img src="portfolio/easylifesolution.jpeg" alt="Shop" style="max-height: 100%; max-width: 100%; ">
-                </div>
-                    <h3>WEB-BASED TAILORING ORDER MANAGEMENT SYSTEM</h3>
-                    <p>Crafting digital solutions for the fashion industry. Designed and
-                    developed a Web-Based Tailoring Order Management System for
-                    EasyLife Solutions using Laravel and MySQL, featuring intuitive
-                    interfaces, real-time tracking,and secure payment integration to
-                    transform the tailoring experience.</p>
-                </div>
-                <div class="card">
-                    <div style="height: 180px; background: linear-gradient(45deg, #40E0D0, #8A2BE2); border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                    <img src="portfolio/vfr.jpg" alt="Shop" style="max-height: 100%; max-width: 100%; ">
-                    </div>
-                    <h3>Virtual Try-On application</h3>
-                    <p>This application allows users to virtually try on clothes using uploaded garment images. Users can select the garment type, adjust its size and position, and see how it fits on their body in real-time. The app offers interactive controls for scaling and positioning, making the try-on experience customizable and user-friendly.</p>
-                </div>
-                <div class="card">
-                    <div style="height: 180px; background: linear-gradient(45deg, #40E0D0, #8A2BE2); border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                        <img src="portfolio/bgremove.jpg" alt="Shop" style="max-height: 100%; max-width: 100%; ">
-                    </div>
-                    <h3>Background Removal Tool (Laravel + API)</h3>
-                    <a href="https://background-removal-tool-laravel-api.onrender.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        style="display: inline-block; 
-                                margin-top: 10px; 
-                                padding: 10px 20px; 
-                                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-                                color: #ffffff; 
-                                border-radius: 8px; 
-                                text-decoration: none; 
-                                font-weight: 600;
-                                font-size: 14px;
-                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                transition: all 0.3s ease;
-                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                        🔗 View Project
+                    <article class="card">
+                        <div>
+                            <img src="portfolio/bgremove.jpg" alt="Background Removal Tool" loading="lazy">
+                        </div>
+                        <h3>Background Removal Tool (Laravel + API)</h3>
+                        <a href="https://background-removal-tool-laravel-api.onrender.com" target="_blank"
+                            rel="noopener noreferrer">
+                            🔗 View Project
                         </a>
-                    <p>This tool is built with Laravel and integrates a third-party API to automatically remove backgrounds from images. Users can upload any image, and the system processes it in real-time, returning a clean, transparent-background version. It’s ideal for e-commerce, design, and content creation needs.</p>
-                </div>
-                <div class="card">
-                    <div style="height: 180px; background: linear-gradient(45deg, #40E0D0, #8A2BE2); border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                        <img src="portfolio/eye.jpg" alt="Shop" style="max-height: 100%; max-width: 100%; ">
-                    </div>
-                    <h3>Real-Time Eye Monitoring Tool</h3>
-                    <p>EyeGuard is a smart application that monitors your eyes in real time using computer vision technology. It helps promote alertness and reduce fatigue by detecting prolonged eye closure. If your eyes remain closed beyond a safe threshold, the system triggers a visual alert and an optional sound notification to regain your attention. </p>
-                </div>
-                <div class="card">
-                    <div style="height: 180px; background: linear-gradient(45deg, #40E0D0, #8A2BE2); border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                        <img src="portfolio/builb.jpg" alt="Shop" style="max-height: 100%; max-width: 100%; ">
-                    </div>
-                    <h3>Hand Gesture-Controlled Light System</h3>
-                    <a href="https://hand-gesture-controlled-light-system.onrender.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        style="display: inline-block; 
-                                margin-top: 10px; 
-                                padding: 10px 20px; 
-                                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-                                color: #ffffff; 
-                                border-radius: 8px; 
-                                text-decoration: none; 
-                                font-weight: 600;
-                                font-size: 14px;
-                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                transition: all 0.3s ease;
-                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                        🔗 View Project
-                        </a>
-                    <p>This interactive system uses real-time hand tracking via a webcam to control lights with simple finger gestures. Users can raise their fingers to activate corresponding lights:
-                    </br>✋ 1 finger = Light 1
+                        <p>This tool is built with Laravel and integrates a third-party API to automatically remove
+                            backgrounds from images. Users can upload any image, and the system processes it in
+                            real-time, returning a clean, transparent-background version. It's ideal for e-commerce,
+                            design, and content creation needs.</p>
+                    </article>
 
-                    </br>✌️ 2 fingers = Lights 1 & 2
+                    <article class="card">
+                        <div>
+                            <img src="portfolio/eye.jpg" alt="Real-Time Eye Monitoring Tool" loading="lazy">
+                        </div>
+                        <h3>Real-Time Eye Monitoring Tool</h3>
+                        <p>EyeGuard is a smart application that monitors your eyes in real time using computer vision
+                            technology. It helps promote alertness and reduce fatigue by detecting prolonged eye
+                            closure. If your eyes remain closed beyond a safe threshold, the system triggers a visual
+                            alert and an optional sound notification to regain your attention.</p>
+                    </article>
 
-                    </br>🤟 3 fingers = Lights 1, 2 & 3
+                    <article class="card">
+                        <div>
+                            <img src="portfolio/builb.jpg" alt="Hand Gesture-Controlled Light System" loading="lazy">
+                        </div>
+                        <h3>Hand Gesture-Controlled Light System</h3>
+                        <a href="https://hand-gesture-controlled-light-system.onrender.com" target="_blank"
+                            rel="noopener noreferrer">
+                            🔗 View Project
+                        </a>
+                        <p>This interactive system uses real-time hand tracking via a webcam to control lights with
+                            simple finger gestures. Users can raise their fingers to activate corresponding lights:<br>
+                            ✋ 1 finger = Light 1<br>
+                            ✌️ 2 fingers = Lights 1 & 2<br>
+                            🤟 3 fingers = Lights 1, 2 & 3<br>
+                            ...and so on</p>
+                    </article>
 
-                    </br>...and so on 
-                    </p>
-                </div>
-                <div class="card">
-                    <div style="height: 180px; background: linear-gradient(45deg, #40E0D0, #8A2BE2); border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                        <img src="portfolio/gpacal.png" alt="Shop" style="max-height: 100%; max-width: 100%; ">
-                    </div>
-                    <h3>BIT GPA_Calculator (HTML, CSS, JavaScript)</h3>
-                    <a href="https://gpacalculator-thilina.web.app/" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        style="display: inline-block; 
-                                margin-top: 10px; 
-                                padding: 10px 20px; 
-                                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-                                color: #ffffff; 
-                                border-radius: 8px; 
-                                text-decoration: none; 
-                                font-weight: 600;
-                                font-size: 14px;
-                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                transition: all 0.3s ease;
-                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                        🔗 View Project
+                    <article class="card">
+                        <div>
+                            <img src="portfolio/gpacal.png" alt="BIT GPA Calculator" loading="lazy">
+                        </div>
+                        <h3>BIT GPA Calculator (HTML, CSS, JavaScript)</h3>
+                        <a href="https://gpacalculator-thilina.web.app/" target="_blank" rel="noopener noreferrer">
+                            🔗 View Project
                         </a>
-                    <p>I developed a responsive GPA Calculator web application that allows BIT students to easily compute their Grade Point Average based on credit hours and letter grades. The calculator supports dynamic subject entry (add/remove subjects), real-time GPA computation with weighted credits, and grade point mapping aligned with academic benchmarks (A+, A, A-, etc.).</p>
-                </div>
-                <div class="card">
-                    <div style="height: 180px; background: linear-gradient(45deg, #40E0D0, #8A2BE2); border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                        <img src="portfolio/chat.jpg" alt="Shop" style="max-height: 100%; max-width: 100%; ">
-                    </div>
-                    <h3> Real-Time Chat App with Laravel, Livewire, and Reverb</h3>
-                    <a href="https://real-time-chatapp-9vo3.onrender.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        style="display: inline-block; 
-                                margin-top: 10px; 
-                                padding: 10px 20px; 
-                                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-                                color: #ffffff; 
-                                border-radius: 8px; 
-                                text-decoration: none; 
-                                font-weight: 600;
-                                font-size: 14px;
-                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                transition: all 0.3s ease;
-                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                        🔗 View Project
+                        <p>I developed a responsive GPA Calculator web application that allows BIT students to easily
+                            compute their Grade Point Average based on credit hours and letter grades. The calculator
+                            supports dynamic subject entry (add/remove subjects), real-time GPA computation with
+                            weighted credits, and grade point mapping aligned with academic benchmarks (A+, A, A-,
+                            etc.).</p>
+                    </article>
+
+                    <article class="card">
+                        <div>
+                            <img src="portfolio/chat.jpg" alt="Real-Time Chat App" loading="lazy">
+                        </div>
+                        <h3>Real-Time Chat App with Laravel, Livewire, and Reverb</h3>
+                        <a href="https://real-time-chatapp-9vo3.onrender.com" target="_blank" rel="noopener noreferrer">
+                            🔗 View Project
                         </a>
-                    <p> Building modern, real-time communication platforms. Architected
-                        and developed a Full-Stack Real-Time Chat Application using
-                        Laravel and Livewire, featuring instant messaging, "is typing"
-                        indicators, read receipts, and a complete friend/block management
-                        system to deliver a seamless and engaging user experience.</p>
+                        <p>Building modern, real-time communication platforms. Architected and developed a Full-Stack
+                            Real-Time Chat Application using Laravel and Livewire, featuring instant messaging, "is
+                            typing" indicators, read receipts, and a complete friend/block management system to deliver
+                            a seamless and engaging user experience.</p>
                         <hr>
                         <p>
-                        user - (test@example.com , password)<br>
-                        user - (thilina@example.org , password)</p>
-                </div>
-                <div class="card">
-                    <div style="height: 180px; background: linear-gradient(45deg, #40E0D0, #8A2BE2); border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                        <img src="portfolio/check.jpg" alt="Shop" style="max-height: 100%; max-width: 100%; ">
-                    </div>
-                    <h3>Housekeeping Management System with Laravel</h3>
-                    <a href="https://checklist-system-8m6j.onrender.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        style="display: inline-block; 
-                                margin-top: 10px; 
-                                padding: 10px 20px; 
-                                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-                                color: #ffffff; 
-                                border-radius: 8px; 
-                                text-decoration: none; 
-                                font-weight: 600;
-                                font-size: 14px;
-                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                transition: all 0.3s ease;
-                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                        🔗 View Project
+                            user - (test@example.com, password)<br>
+                            user - (thilina@example.org, password)
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div>
+                            <img src="portfolio/check.jpg" alt="Housekeeping Management System" loading="lazy">
+                        </div>
+                        <h3>Housekeeping Management System with Laravel</h3>
+                        <a href="https://checklist-system-8m6j.onrender.com" target="_blank" rel="noopener noreferrer">
+                            🔗 View Project
                         </a>
-                    <p> Streamlining operations for the property management industry.
-                        Designed and deployed a Full-Stack Housekeeping Management
-                        System using Laravel, MySQL, and Docker, featuring role-based
-                        dashboards, interactive mobile checklists, and server-side GPS
-                        verification to ensure quality control and provide real-time
-                        oversight for property cleaning operations </p> <hr>
+                        <p>Streamlining operations for the property management industry. Designed and deployed a
+                            Full-Stack Housekeeping Management System using Laravel, MySQL, and Docker, featuring
+                            role-based dashboards, interactive mobile checklists, and server-side GPS verification to
+                            ensure quality control and provide real-time oversight for property cleaning operations.</p>
+                        <hr>
                         <p>
-                        admin - (admin@example.com , password)<br>
-                        owner - (owner@example.com , password)<br>
-                        housekeeper - (housekeeper@example.com , password)</p>
+                            admin - (admin@example.com, password)<br>
+                            owner - (owner@example.com, password)<br>
+                            housekeeper - (housekeeper@example.com, password)
+                        </p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-        <section id="contact" class="content-section">
-        <div class="section-content">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-content">
-                <!-- Responsive grid container -->
-                <div class="contact-grid-container">
-                    <!-- Get in Touch section -->
-                    <div class="contact-info">
-                        
-                        <h3 class="home-title" style="font-size: 2rem;">Get in Touch</h3>
-                        <p>
-                            Have a project in mind? Feel free to reach out and let's discuss how I can help bring your ideas to life.
-                        </p>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>thilina.supunsara.croos@gmail.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+94 763702544</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Puttalam, Sri Lanka</span>
-                            </div>
-                            <a href="THILINA_SUPUNSARA CV.pdf" target="_blank" rel="noopener noreferrer">
-                                <button class="tech-button">View My CV</button>
+        <!-- Contact Section -->
+        <section id="contact" class="content-section" aria-labelledby="contact-title">
+            <div class="section-content">
+                <h2 class="section-title" id="contact-title">Contact Me</h2>
+                <div class="contact-content">
+                    <!-- Responsive grid container -->
+                    <div class="contact-grid-container">
+                        <!-- Get in Touch section -->
+                        <div class="contact-info">
+                            <h3 class="home-title">Get in Touch</h3>
+                            <p>
+                                Have a project in mind? Feel free to reach out and let's discuss how I can help bring
+                                your ideas to life.
+                            </p>
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <span>thilina.supunsara.croos@gmail.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <span>+94 763702544</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <span>Puttalam, Sri Lanka</span>
+                                </div>
+                                <a href="THILINA_SUPUNSARA CV.pdf" target="_blank" rel="noopener noreferrer">
+                                    <button class="tech-button" type="button">View My CV</button>
                                 </a>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="contact-form-container">
+                            <h3 class="home-title">Send a Message</h3>
+                            <form class="contact-form" id="contactForm" novalidate>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required autocomplete="name"
+                                        placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required autocomplete="email"
+                                        placeholder="your@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" required
+                                        placeholder="What's this about?">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" required
+                                        placeholder="Tell me about your project..."></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">Send Message</button>
+                            </form>
                         </div>
                     </div>
-                    
-                    <!-- Contact Form -->
-                    <div class="contact-form-container">
-                        <h3 class="home-title" style="font-size: 2rem;">Send a Message</h3>
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" required></textarea>
-                            </div>
-                            <button type="submit" class="submit-btn">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-                
-                <!-- Social Links -->
-                <div class="social-links">
-                   
-                     <h3 class="home-title" style="font-size: 2rem;">Follow Me</h3>
-                    <div class="social-icons">
-                        <a href="https://github.com/ThilinaSupunsara"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/thilina-supunsara/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/share/16XJPUkTjH/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/thilina_supunsara?igsh=bHg1ZGw2N3Y1YmZ2"><i class="fab fa-instagram"></i></a>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <h3 class="home-title">Follow Me</h3>
+                        <div class="social-icons">
+                            <a href="https://github.com/ThilinaSupunsara" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/thilina-supunsara/" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.facebook.com/share/16XJPUkTjH/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.instagram.com/thilina_supunsara?igsh=bHg1ZGw2N3Y1YmZ2" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Background Elements -->
-    <div class="grid-container">
+    <div class="grid-container" aria-hidden="true">
         <div class="grid"></div>
     </div>
 
-    <div class="geometric-shapes">
+    <div class="geometric-shapes" aria-hidden="true">
         <div class="geo-shape triangle"></div>
         <div class="geo-shape hexagon"></div>
         <div class="geo-shape diamond"></div>
         <div class="geo-shape circle"></div>
     </div>
 
-    <div class="scan-lines">
+    <div class="scan-lines" aria-hidden="true">
         <div class="scan-line"></div>
         <div class="scan-line"></div>
     </div>
 
-    <div class="holo-overlay"></div>
+    <div class="holo-overlay" aria-hidden="true"></div>
 
-    <div class="code-snippets" id="codeSnippets"></div>
+    <div class="code-snippets" id="codeSnippets" aria-hidden="true"></div>
 
-    <div class="data-viz" id="dataViz"></div>
+    <div class="data-viz" id="dataViz" aria-hidden="true"></div>
 
-    <div class="cursor" id="cursor"></div>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
 
-
-</body>
-<script>
-    const form = document.querySelector(".contact-form");
+    <!-- Contact Form Script -->
+    <script>
+        const form = document.querySelector("#contactForm");
 
         form.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            emailjs.send("service_fz8mveq", "template_649dksk", {
-            name: document.getElementById("name").value,
-                    email: document.getElementById("email").value,
-                    subject: document.getElementById("subject").value,
-                    message: document.getElementById("message").value
-            })
-            .then(function () {
-            alert("Message sent successfully!");
-            form.reset(); // ✅ This clears all input fields
-            }, function (error) {
-            alert("Failed to send message: " + JSON.stringify(error));
-            });
-        });
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
 
-</script>
+            emailjs.send("service_fz8mveq", "template_649dksk", {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value
+            })
+                .then(function () {
+                    alert("Message sent successfully!");
+                    form.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, function (error) {
+                    alert("Failed to send message. Please try again.");
+                    console.error("EmailJS Error:", error);
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+</body>
+
 </html>
