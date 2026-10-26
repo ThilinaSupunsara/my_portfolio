@@ -74,6 +74,44 @@
     --z-cursor: 9999;
 }
 
+/* =====================================================
+   LIGHT MODE VARIABLES
+   ===================================================== */
+body.light-mode {
+    --bg-primary: #f0f4f8;
+    --bg-secondary: #e2e8f0;
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --bg-glass: rgba(240, 244, 248, 0.85);
+    --bg-glass-light: rgba(0, 0, 0, 0.03);
+    --text-primary: #1a202c;
+    --text-secondary: rgba(26, 32, 44, 0.85);
+    --text-muted: rgba(26, 32, 44, 0.6);
+    --border-subtle: rgba(64, 224, 208, 0.25);
+    --border-glow: rgba(64, 224, 208, 0.5);
+    --shadow-soft: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 40px rgba(64, 224, 208, 0.2);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .navbar {
+    background: rgba(240, 244, 248, 0.85);
+    border-bottom-color: rgba(64, 224, 208, 0.2);
+}
+
+body.light-mode .mobile-nav {
+    background: rgba(240, 244, 248, 0.97);
+}
+
+body.light-mode .mobile-nav a {
+    color: rgba(26, 32, 44, 0.8);
+}
+
+body.light-mode .grid {
+    background-image:
+        linear-gradient(rgba(64, 224, 208, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(64, 224, 208, 0.08) 1px, transparent 1px);
+}
+
 /* Reset & Base Styles */
 *,
 *::before,
@@ -235,6 +273,43 @@ body {
     background: rgba(64, 224, 208, 0.1);
     border-color: var(--primary-cyan);
     box-shadow: 0 0 20px rgba(64, 224, 208, 0.2);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-full);
+    color: var(--primary-cyan);
+    font-size: 1.1rem;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    background: rgba(64, 224, 208, 0.15);
+    border-color: var(--primary-cyan);
+    box-shadow: 0 0 20px rgba(64, 224, 208, 0.3);
+    transform: rotate(20deg) scale(1.1);
+}
+
+body.light-mode .theme-toggle {
+    color: var(--primary-purple);
+    border-color: rgba(138, 43, 226, 0.3);
+}
+
+body.light-mode .theme-toggle:hover {
+    background: rgba(138, 43, 226, 0.1);
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
 }
 
 /* Mobile Navigation */
@@ -417,6 +492,20 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--text-primary);
     margin-bottom: var(--space-xl);
+}
+
+/* Typewriter Cursor */
+.typewriter-cursor {
+    display: inline-block;
+    color: var(--primary-cyan);
+    font-weight: 300;
+    animation: cursorBlink 0.8s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .changing-text {
@@ -1050,6 +1139,17 @@ body {
 /* =====================================================
    BACKGROUND EFFECTS
    ===================================================== */
+/* Particle Canvas */
+#tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
 .grid-container {
     position: fixed;
     top: 0;

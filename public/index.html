@@ -48,6 +48,9 @@
         })();
     </script>
 
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
     <!-- Stylesheets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,6 +77,9 @@
         </nav>
         <button class="mobile-menu-btn" aria-label="Open mobile menu" aria-expanded="false">
             <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+            <i class="fas fa-moon" id="themeIcon"></i>
         </button>
     </header>
 
@@ -108,7 +114,7 @@
         <section id="home" class="content-section active" aria-labelledby="home-title">
             <div class="home-content">
                 <h3 class="home-title">Hello, I'm</h3>
-                <h1 class="home-title" id="home-title">Thilina Supunsara</h1>
+                <h1 class="home-title" id="home-title"><span class="typewriter-text"></span><span class="typewriter-cursor">|</span></h1>
                 <h2 class="creative-text">
                     <span class="changing-text">Software Engineer</span>
                 </h2>
@@ -786,6 +792,9 @@
             </div>
         </section>
     </main>
+
+    <!-- Particle Background -->
+    <div id="tsparticles"></div>
 
     <!-- Background Elements -->
     <div class="grid-container" aria-hidden="true">
