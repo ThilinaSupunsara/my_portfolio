@@ -641,11 +641,14 @@ body {
 /* Project Link Buttons */
 #portfolio .card a[href*="onrender"],
 #portfolio .card a[href*="firebase"],
+#portfolio .card a[href*="hf.space"],
+#portfolio .card a[href*="vercel.app"],
 #portfolio .card a[href*="web.app"] {
     display: inline-flex !important;
     align-items: center;
     gap: 8px;
     margin: var(--space-sm) 0 !important;
+    margin-left: 10px;
     padding: 12px 24px !important;
     background: var(--gradient-primary) !important;
     border-radius: var(--radius-sm) !important;
@@ -656,6 +659,8 @@ body {
 
 #portfolio .card a[href*="onrender"]:hover,
 #portfolio .card a[href*="firebase"]:hover,
+#portfolio .card a[href*="hf.space"]:hover,
+#portfolio .card a[href*="vercel.app"]:hover,
 #portfolio .card a[href*="web.app"]:hover {
     transform: translateY(-2px) !important;
     box-shadow: 0 8px 25px rgba(64, 224, 208, 0.3) !important;
