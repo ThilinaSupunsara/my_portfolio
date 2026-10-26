@@ -232,19 +232,24 @@
         window.addEventListener('scroll', optimizeAnimations);
 
         document.addEventListener('DOMContentLoaded', () => {
-        const items = ["Designer", "Developer", "Freelancer"];
+        const items = ["Software Engineer", "Full Stack Developer", "Creative Designer"];
         const span = document.querySelector('.changing-text');
         if (!span) return; // Exit if element not found
 
+        // Set initial text
+        span.textContent = items[0];
+        
         let index = 0;
         setInterval(() => {
             index = (index + 1) % items.length;
             span.style.opacity = 0;
+            span.style.transform = 'translateY(10px)';
             setTimeout(() => {
                 span.textContent = items[index];
                 span.style.opacity = 1;
-            }, 300);
-        }, 2000);
+                span.style.transform = 'translateY(0)';
+            }, 400);
+        }, 2500);
     });
 
        
